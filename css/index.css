@@ -1,0 +1,441 @@
+*,
+*::after *::before {
+  box-sizing: border-box;
+}
+
+*:hover {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100vh;
+  min-width: 1200px;
+  overflow-x: hidden;
+}
+
+.header,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 10vh;
+  width: 100vw;
+}
+
+.footer {
+  background-color: white;
+}
+
+.hero {
+  width: 100vw;
+  height: 90vh;
+  background-image: url("../images/main_section_photo.png");
+  background-size: cover;
+}
+
+.logo {
+  height: fit-content;
+}
+.logo_link {
+  text-decoration: none;
+}
+
+.menu_links,
+.footer-menu_links {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0px;
+  padding-left: 0px;
+  width: 12.5vw;
+}
+
+.menu_link_text {
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 12px;
+  color: white;
+  text-decoration: underline;
+}
+
+.burger-menu-container {
+  display: none;
+}
+.burger-menu-container_not_active {
+  display: none;
+}
+.burger-menu-button,
+.burger-menu-button::before,
+.burger-menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  border-radius: 2px;
+}
+.burger-menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+
+.burger-menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+
+.burger-menu {
+  display: none;
+  list-style: none;
+  background-color: #415275;
+}
+
+.burger-menu_active {
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 25vh;
+  left: 32vw;
+  display: flex;
+  flex-direction: column;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.hero-text_la {
+  font-size: 115px;
+  font-weight: 200;
+  line-height: 115px;
+  height: 90px;
+}
+
+.hero-text_mount {
+  font-size: 124px;
+  font-weight: 200;
+  line-height: 124px;
+  background: -webkit-linear-gradient(#415275, #313b51);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.footer-logo_link {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.footer-logo_text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  font-family: "Bebas Neue", sans-serif;
+}
+.footer-text_la {
+  font-size: 21px;
+  height: 21px;
+  font-weight: 200;
+  color: #000000;
+}
+.footer-text_mount {
+  font-size: 23px;
+  font-weight: 200;
+  background: -webkit-linear-gradient(#415275, #313b51);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.footer-menu_text {
+  color: #000000;
+}
+
+.history-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/peak.png");
+  background-size: cover;
+}
+
+.history-section_info {
+  display: flex;
+  flex-direction: column;
+  width: 62vw;
+}
+.history-header {
+  font-family: "Oswald", sans-serif;
+  font-size: 136px;
+  color: #667893;
+}
+.history-header::after {
+  content: "HISTORY";
+  position: relative;
+  bottom: 25px;
+  right: 27px;
+  font-size: 32px;
+  font-weight: 800;
+  color: #313b51;
+}
+.history-section_paragraph {
+  padding-left: 70px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: #414f6b;
+}
+.slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+  height: 22vh;
+  background-color: #313b51;
+  opacity: 0.9;
+}
+
+.slider-container {
+  display: flex;
+  height: fit-content;
+  margin-top: 10px;
+}
+
+.slide {
+  display: flex;
+  height: fit-content;
+}
+
+.dots {
+  display: flex;
+}
+.dot {
+  cursor: pointer;
+  height: 7px;
+  width: 7px;
+  margin: 5px 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.climb-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.climb-section_info {
+  display: flex;
+  align-items: center;
+  width: 55vw;
+}
+
+.climb-header {
+  font-family: "Oswald", sans-serif;
+  font-size: 136px;
+  line-height: 136px;
+  height: 150px;
+  color: #667893;
+}
+.climb-header::after {
+  content: "CLIMB";
+  position: relative;
+  bottom: 25px;
+  right: 27px;
+  font-size: 32px;
+  font-weight: 800;
+  color: #313b51;
+}
+
+.climb-section_paragraph {
+  padding-left: 70px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: #414f6b;
+}
+
+.climb-section_tabs {
+  display: flex;
+  width: 100vw;
+  height: fit-content;
+}
+.climb-section_tabs_container {
+  display: flex;
+  width: fit-content;
+  width: 100%;
+  background-color: #313b51;
+}
+.climb-section_tabs_container:nth-child(1) {
+  justify-content: flex-end;
+  width: 45vw;
+}
+
+.climb-section_tab {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  text-decoration: underline;
+  color: #b0b4be;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+.climb-tab_actve {
+  background-color: #b0b4be;
+  color: #414f6b;
+}
+.climb-schedule_block1,
+.climb-schedule_block2 {
+  display: none;
+  height: 100%;
+  width: 100vw;
+  background-image: url("../images/tab_1_img.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.climb-schedule_block2 {
+  background-image: url("../images/Tab2_climb_img.png");
+}
+.climb-schedule_block_active {
+  display: flex;
+}
+.climb-schedule_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  left: 22%;
+  top: 10%;
+  width: fit-content;
+  padding: 2vh 5vw;
+  background-color: #f5f7fa;
+}
+.climb-schedule_header {
+  font-family: "Oswald", sans-serif;
+  font-size: 3.5vh;
+  color: #414f6b;
+  margin-bottom: 20px;
+}
+
+.climb-schedule_list_item {
+  list-style: none;
+  font-family: "Lato", sans-serif;
+  font-size: 1.8vh;
+}
+
+.climb-schedule_list_item:nth-child(1),
+.climb-schedule_list_item:nth-child(2) {
+  padding: 3px 0px;
+}
+.climb-schedule_list_item:nth-child(3) {
+  padding: 20px 0px;
+}
+
+.climb-section_footer {
+  height: 20vh;
+  bottom: 0px;
+  background-color: #414f6b;
+}
+.climb-logo {
+  background-color: #414f6b;
+  opacity: 0.5;
+}
+.footer-climb {
+  color: white;
+  background-color: #414f6b;
+  opacity: 0.5;
+}
+.footer-climb_mount {
+  font-size: 23px;
+  color: white;
+  font-weight: 200;
+  background-color: #414f6b;
+  opacity: 0.5;
+}
+.copyright {
+  position: relative;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 600;
+  color: #fff;
+  background-color: #414f6b;
+  opacity: 0.5;
+}
+@media (max-width: 800px) {
+  .burger-menu-container {
+    display: block;
+  }
+  .menu_links {
+    display: none;
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 25vh;
+    left: 15vw;
+  }
+  .climb-section_tabs_container:nth-child(1) {
+    width: 100vw;
+  }
+  .climb-schedule_container {
+    position: static;
+
+    height: fit-content;
+    width: fit-content;
+    padding: 3px 3px;
+  }
+  #climb-schedule_block {
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .climb-schedule_header {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  .climb-schedule_list_item {
+    font-size: 10px;
+  }
+
+  .climb-section_tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0px;
+  }
+  .climb-section_tabs_container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
